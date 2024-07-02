@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Mouneim Ettouhami</title>
+    <link>https://amettouhami.github.io/Mouneim_Portfolio/post/</link>
+    <description>Recent content in Projects on Mouneim Ettouhami</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://amettouhami.github.io/Mouneim_Portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyzing Flight Traffic Data using Python and Pandas</title>
+      <link>https://amettouhami.github.io/Mouneim_Portfolio/post/project-1/</link>
+      <pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://amettouhami.github.io/Mouneim_Portfolio/post/project-1/</guid>
+      <description>The Flight Delay dataset lists flight data for 14 major U.S. airlines for the year 2015. It consists of three tables: Flights, Airports and Airlines. We do a little bit of data cleaning, and then we explore the relationships between these three tables and try to answer basic questions like identifying the flights and airports with the most flight delays, and examine the effects of seasonality, etc., using Python and the Pandas library.</description>
+    </item>
+    
+    <item>
+      <title>Analyzing Soccer Data With SQL</title>
+      <link>https://amettouhami.github.io/Mouneim_Portfolio/post/project-2/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://amettouhami.github.io/Mouneim_Portfolio/post/project-2/</guid>
+      <description>The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries, covering various teams&amp;rsquo; and players&amp;rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones.</description>
+    </item>
+    
+    <item>
+      <title>Regression: Predicting Used Car Prices</title>
+      <link>https://amettouhami.github.io/Mouneim_Portfolio/post/project-3/</link>
+      <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://amettouhami.github.io/Mouneim_Portfolio/post/project-3/</guid>
+      <description>We build a linear regression model using scikit-learn to predict used car prices. By carefully cleaning the data and removing the outliers in the training set, we show that a linear regression model with polynomial features is quite successful at predicting the price of used cars with good accuracy, with a coefficient of determination R^2 close to 0.94 on the test set.
+Using the linear regression model from this project, we used Streamlit to build a client-facing web app to predict used car prices.</description>
+    </item>
+    
+    <item>
+      <title>Classification: Twitter Sentiment Analysis</title>
+      <link>https://amettouhami.github.io/Mouneim_Portfolio/post/project-4/</link>
+      <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://amettouhami.github.io/Mouneim_Portfolio/post/project-4/</guid>
+      <description>In this project, we address the classic problem of assigning either a positive or a negative sentiment to a given statement by using Natural Language Processing (NLP) techniques to learn how to infer sentiments from data. Here, we used the Sentiment140 dataset from Kaggle which has over 1.6 million labelled tweets. Using BERT and DistilBERT models, we were able to achieve good classification performance, with values of the accuracy, precision and recall all in the range of 80% on the test set.</description>
+    </item>
+    
+    <item>
+      <title>Classification: Using Machine Learning to Detect Credit Card Fraud</title>
+      <link>https://amettouhami.github.io/Mouneim_Portfolio/post/project-5/</link>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://amettouhami.github.io/Mouneim_Portfolio/post/project-5/</guid>
+      <description>In this project, we tackle the difficult problem of classification on a heavily imbalanced dataset. We try to mitigate the imbalanced nature of the data by using different strategies, like using balanced class weights, and using the so-called synthetic minority oversampling technique (SMOTE, for short). Using these techniques we are able to achieve values of the precision and recall that are in the range of 82% on the test set.</description>
+    </item>
+    
+  </channel>
+</rss>

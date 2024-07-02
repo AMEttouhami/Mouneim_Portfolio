@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Analyzing Soccer Data With SQL | Mouneim Ettouhami</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries, covering various teams&rsquo; and players&rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones.">
+    <meta name="generator" content="Hugo 0.109.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="https://amettouhami.github.io/Mouneim_Portfolio/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Analyzing Soccer Data With SQL" />
+<meta property="og:description" content="The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries, covering various teams&rsquo; and players&rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amettouhami.github.io/Mouneim_Portfolio/post/project-2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-04-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-05T00:00:00+00:00" /><meta property="og:site_name" content="Mouneim Ettouhami" />
+<meta itemprop="name" content="Analyzing Soccer Data With SQL">
+<meta itemprop="description" content="The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries, covering various teams&rsquo; and players&rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones."><meta itemprop="datePublished" content="2024-04-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-04-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="83">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Analyzing Soccer Data With SQL"/>
+<meta name="twitter:description" content="The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries, covering various teams&rsquo; and players&rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://amettouhami.github.io/Mouneim_Portfolio/images/soccer-stadium2-unsplash.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://amettouhami.github.io/Mouneim_Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Mouneim Ettouhami
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://amettouhami.github.io/Mouneim_Portfolio/about/" title="About Me page">
+              About Me
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://amettouhami.github.io/Mouneim_Portfolio/contact/" title="Accomplishments page">
+              Accomplishments
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://amettouhami.github.io/Mouneim_Portfolio/post/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Analyzing Soccer Data With SQL</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Analyzing Soccer Data With SQL</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-04-05T00:00:00Z">April 5, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The European Soccer Database is a database of soccer data about 25,000 matches, 300 teams, and 10,000 players from 11 European countries,
+covering various teams&rsquo; and players&rsquo; statistics during the period from 2008 to 2016. It has 7 tables in total: Country, League, Match, Player, Player_Attributes, Team and Team_Attributes. In this project we have used SQLite to analyze these tables, starting with very simple queries and gradually increasing the level of difficulty to more complex ones.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><a href="https://www.kaggle.com/code/mouneim/european-soccer-database/edit">Link to my SQL code on Kaggle</a>.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://amettouhami.github.io/Mouneim_Portfolio/" >
+    &copy;  Mouneim Ettouhami 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
